@@ -30,6 +30,14 @@ li {
     border: 1px solid #dfdfdc;
     border-radius: 5px;
 }
+.errors {
+    color: #ed2222;
+    background-color: #f0cdcd;
+    list-style: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
 /* フォーム */
 input[type="text"] {
     border: 1px solid #b8b4b4;

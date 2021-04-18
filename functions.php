@@ -22,6 +22,49 @@ function h($str)
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
+function insertValidate($title)
+{
+    $errors = [];
+
+    if ($title == '') {
+        $errors[] = MSG_TITLE_REQUIRED;
+    }
+
+    return $errors;
+}
+
+function insertTask($title)
+{
+    try {
+        $dbh = connectDb();
+        $sql = <<<EOM
+        INSERT INTO
+            tasks
+            (title)
+        VALUES
+            (:title);
+        EOM;
+        $stmt = $dbh->prepare($sql);
+        $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+}
+
+function createErrMsg($errors)
+{
+    $err_msg = "<ul class=\"errors\">\n";
+
+    foreach ($errors as $error) {
+        $err_msg .= "<li>" . h($error) . "</li>\n";
+    }
+
+    $err_msg .= "</ul>\n";
+
+    return $err_msg;
+}
+
 function findTaskByStatus($status)
 {
     $dbh = connectDb();
