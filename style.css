@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* 共通部分
+---------------------*/
+html {
+    font-size: 100%;
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: rgb(66, 69, 71);
+}
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-position: inside;
+}
+li {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.wrapper {
+    width: 600px;
+    margin: 30px auto;
+    padding: 40px 50px;
+    border: 1px solid #dfdfdc;
+    border-radius: 5px;
+}
+/* フォーム */
+input[type="text"] {
+    border: 1px solid #b8b4b4;
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px;
+}
+/* ボタン */
+.btn {
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn:hover {
+    background-color:#93d8d0;
+}
+.submit-btn,
+.return-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px 0;
+    letter-spacing: 1.5rem;
+    text-indent: 1.5rem;
+}
+.submit-btn{
+    background-color: #4394eb;
+}
+.return-btn{
+    background-color: #f5b781;
+    display: block;
+}
+.done-btn,
+.edit-btn,
+.delete-btn {
+    font-size: 0.9rem;
+    margin-right: 3px;
+    padding: 5px;
+}
+.done-btn {
+    background-color: #29cd70;
+}
+.edit-btn {
+    background-color: rgb(47, 147, 240);
+}
+.delete-btn {
+    background-color: #f96262;
+}
+/* タスク一覧画面 
+-----------------------*/
+/* タスク登録フォーム */
+.new-task {
+    margin-bottom: 60px;
+}
+/* 未完了タスク一覧 */
+.notyet-task {
+    margin-bottom: 60px;
+}
+.notyet-task h2 {
+    background: linear-gradient(transparent 70%, #fee9a4 70%);
+}
+/* 完了タスク一覧 */
+.done-task {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.done-task h2 {
+    background: linear-gradient(transparent 70%, #edbbfa 70%);
+}
